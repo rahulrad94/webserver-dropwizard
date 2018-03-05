@@ -1,0 +1,38 @@
+{
+  "1" : {
+    "img_off" : "https://lh6.googleusercontent.com/pVNBla4V6YxoEFY8wWlLcccWWHKqEKw9vja92gb5CrVtmeELycaDRMQuKek=w2400",
+    "img_on" : "https://lh6.googleusercontent.com/EoNeK3cdU8t2gteZK_5mqC8rq0otOl335qFhBO7hRQoZNF4bm7iefDFhhGU=w2400",
+    "company" : "philips",
+    "type" : "light",
+    "status" : "off"
+  },
+  "2" : {
+    "img_off" : "https://lh5.googleusercontent.com/Ud598C1qNhP8wBFGvOp46F4z_1-MF7cdGPe77NBSLF50aPEnWOgeDYVlMW8=w2400",
+    "img_on" : "https://lh3.googleusercontent.com/gGXF5v5zC_OajUB6iw3O9EdwEc19g7VdOPkCaEzHfBDET2iwLHHn4p2QNQ0=w2400",
+    "temperature" : "0",
+    "company" : "hitachi",
+    "type" : "ac",
+    "status" : "on"
+  },
+  "3" : {
+    "img_off" : "https://lh5.googleusercontent.com/wJhhKN6x45xyj5nlXpGUagJqvBIueG1I1NONqJPc6SimtTOLHcH9F6UDnQI=w2400",
+    "img_on" : "https://lh5.googleusercontent.com/2J8h-BdNDs8OCZ1XMoO99LXhFOwWGHfwUJODI77BCSRlDhXfQX6dCHP-7rI=w2400",
+    "company" : "lg",
+    "type" : "refrigerator",
+    "status" : "off"
+  },
+  "4" : {
+    "img_off" : "https://lh4.googleusercontent.com/tNkS_90s5YR7mniT9Ni4zEVF8fmJeDOEsCv8FYfeoCfYCv2m6IP1KHlVqfY=w2400",
+    "img_on" : "https://lh4.googleusercontent.com/tNkS_90s5YR7mniT9Ni4zEVF8fmJeDOEsCv8FYfeoCfYCv2m6IP1KHlVqfY=w2400",
+    "company" : "abc",
+    "type" : "fan",
+    "status" : "on"
+  },
+  "5" : {
+    "img_off" : "https://lh5.googleusercontent.com/mSXTLpWvbEt9dKmB98Asi1Wsf4UfcgoRlROKOwwBkNl1snMvVWx_2ZgG-fg=w2400",
+    "img_on" : "https://lh4.googleusercontent.com/J-OArtsZAgBB-UsVAIWJZht9nmgJ5QwpyOspQmIEXJQrA_1R6Db1wWK_ENk=w2400",
+    "company" : "xyz",
+    "type" : "curtains",
+    "status" : "off"
+  }
+}

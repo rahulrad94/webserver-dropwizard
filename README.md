@@ -1,6 +1,5 @@
 Initial setup(for now):
 Change the ip address on the lines 82, 98 and and 130 in iot.html to the ip address where you're hosting the server
-Note: This is temporary, later I'll run the server on azure cloud with a static ip 
 
 Steps to run the server:
 

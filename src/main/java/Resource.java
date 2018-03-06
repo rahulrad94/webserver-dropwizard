@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.concurrent.Semaphore;
-import javax.ws.rs.core.Response;
 
 @Path("/")
 public class Resource {
@@ -40,8 +39,7 @@ public class Resource {
                 if(componentToChange.get(entry.getKey()) != null)
                     ((ObjectNode) componentToChange).set(entry.getKey(), request.get(entry.getKey()));
                 else
-                    //return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
-                    return "Missing Key";
+                    return "Missing Key!";
             }
             responseString = componentFile.toString();
             lock.acquire();
@@ -49,15 +47,11 @@ public class Resource {
             lock.release();
         } catch (IOException e) {
             e.printStackTrace();
-            //return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
-            return "IO exception";
+            return "IO exception!";
         } catch (InterruptedException e) {
             e.printStackTrace();
-            //return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
-            return "Lock Exception";
+            return "Lock Exception!";
         }
-
-        //return Response.ok(responseString).build();
           return responseString;
     }
 
@@ -69,11 +63,9 @@ public class Resource {
 
         try {
             JsonNode componentsJson = mapper.readTree(jsonString);
-            //return Response.ok(componentsJson.get(id)).build();
             return String.valueOf(componentsJson.get(id));
         } catch (IOException e) {
             e.printStackTrace();
-            //return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
             return "IO Exception";
         }
     }
@@ -87,24 +79,19 @@ public class Resource {
             Object obj = parser.parse(new FileReader("src/main/java/components.json"));
             lock.release();
             JSONObject jsonObject = (JSONObject) obj;
-            //return Response.ok(jsonObject.toJSONString()).build();
             return jsonObject.toJSONString();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            //return Response.status(Response.Status.NOT_FOUND).build();
-            return "FileNotFoundException OCCURREDDDD!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
+            return "FileNotFoundException occurred!";
         } catch (IOException e) {
             e.printStackTrace();
-            //return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
-            return "IOException OCCURREDDDD!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
+            return "IOException occurred!";
         } catch (InterruptedException e) {
             e.printStackTrace();
-            //return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
-            return "Lock Exception OCCURREDDDD!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
+            return "Lock Exception occurred!";
         }catch (ParseException e) {
             e.printStackTrace();
-            //return Response.status(Response.Status.INTERNAL_SERVER_ERROR).build();
-            return "ParseException OCCURREDDDD!!!!!!!!!!!!!!!!!!!!!!!!!!!!";
+            return "ParseException occurred!";
         }
     }
 }

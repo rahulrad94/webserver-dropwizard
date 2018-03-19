@@ -76,10 +76,12 @@
 
     <script type='text/javascript'>
 
+      var host ="http://192.168.0.164:8080/";
+
       $(document).ready(function(){
             //Perform Ajax request.
             $.ajax({
-                url: 'http://192.168.0.165:8080/accesscomponentfile',
+                url: host + 'accesscomponentfile',
                 type: 'GET',
                 contentType: "application/json; charset=utf-8",
                 success: function(data){
@@ -95,7 +97,7 @@
         function refreshStatus(){
 
           $.ajax({
-              url: 'http://192.168.0.165:8080/accesscomponentfile',
+              url: host + 'accesscomponentfile',
               type: 'GET',
               contentType: "application/json; charset=utf-8",
               success: function(data){
@@ -127,7 +129,7 @@
 
           $.ajax({
             type: "POST",
-            url: "http://192.168.0.165:8080/changeappliance",
+            url: host + "changeappliance",
             // The key needs to match your method's input parameter (case-sensitive).
             data: JSON.stringify(request),
             contentType: "application/json; charset=utf-8",
